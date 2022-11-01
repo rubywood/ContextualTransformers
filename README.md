@@ -38,3 +38,7 @@ The name of the patch file must follow the syntax:
 where x_coordinate and y_coordinate correspond to the coordinates of the patch in the WSI.
 
 The names of the patch files should be stored in a csv with one row per patch, along with the slide name, the case/patient ID and the response value that you are trying to predict.
+
+## Logging
+
+When training the baseline and attention models, this repository uses Tensorboard to log metrics and images. If you don't want this, set the 'log' argument to False in each notebook.
