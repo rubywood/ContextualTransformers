@@ -33,7 +33,7 @@ where slide is the name of the WSI and patch is the name of the individual patch
 
 The name of the patch file must follow the syntax:
 
-{slide}_{other parameters}_x_{x_coordinate}_y_{y_coordinate}.{file type}
+{slide}\_{other parameters}\_x\_{x\_coordinate}\_y\_{y\_coordinate}.{file type}
 
 where x_coordinate and y_coordinate correspond to the coordinates of the patch in the WSI.
 
