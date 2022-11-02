@@ -1,4 +1,3 @@
-import argparse
 import os
 import random
 import pandas as pd
@@ -64,14 +63,14 @@ def upsample(label_df, label_counts, predicting_var):
     uniq_slides = label_df.slide.unique()
     upsampled_slides = list(uniq_slides.copy())
     min_class = label_counts.argmin()
-    min_labels = label_df[label_df[args.predicting_var]==min_class].reset_index()
+    min_labels = label_df[label_df[predicting_var]==min_class].reset_index()
     min_label_slides = list(min_labels.slide.unique())
     upsampled_df = label_df.copy()
     for i in range(upsample_factor-1):
         upsampled_slides += min_label_slides
         upsampled_df = upsampled_df.append(min_labels)
     print('-- Train Distribution after upsampling:')
-    print(upsampled_df[args.predicting_var].value_counts())
+    print(upsampled_df[predicting_var].value_counts())
     return upsampled_df.reset_index(drop=True), upsampled_slides  
 
 
